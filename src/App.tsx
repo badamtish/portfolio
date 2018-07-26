@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Header } from './components/header';
+import Header2 from './components/header2';
 // import logo from './logo.svg';
 
 class App extends React.Component {
   public render() {
     return (
       <div>
-        <Header />
+        <Header2 />
       </div>
     );
   }

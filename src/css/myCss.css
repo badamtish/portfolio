@@ -1,0 +1,9 @@
+.primary-color {
+    color: #a972ff;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
