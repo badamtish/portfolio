@@ -14,44 +14,50 @@ module.exports = {
 
   devtool: 'inline-source-map',
   entry: './src/index.tsx',
-    output: {
-      filename: 'bundle.[hash].js'
-    },
+  output: {
+    filename: 'bundle.[hash].js'
+  },
   mode: 'development',
   module: {
     rules: [
 
-        // First Rule
-        {
+      // First Rule
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-        },
+      },
 
-        // Second Rule
-        {
+      // Second Rule
+      {
         test: /\.css$/,
         use: [
-            {
+          {
             loader: 'style-loader'
-            },
-            {
+          },
+          {
             loader: 'css-loader',
             options: {
-                modules: true,
-                camelCase: true,
-                sourceMap: true
+              modules: true,
+              camelCase: true,
+              sourceMap: true
             }
-            }
+          }
         ]
-        }
+      }
     ]
-    },
-      plugins: [
-        new HtmlWebpackPlugin({
-          template: 'public/index.html',
-          favicon: 'public/favicon.ico'
-        })
-      ],
-    
+  },
+  loaders: [
+    {
+      test: /\.(png|jpg)$/,
+      loader: 'url?limit=25000'
+    }
+  ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+      favicon: 'public/favicon.ico'
+    })
+  ],
+
 };

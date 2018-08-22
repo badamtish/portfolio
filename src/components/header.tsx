@@ -1,67 +1,30 @@
 import * as React from 'react';
-
-export class Header extends React.Component {
+import Work from './work';
+export default class Header2 extends React.Component {
     render() {
         return (
             <div>
-                <section className="hero is-primary ">
-                    <div className="hero-head">
-                        <nav className="navbar has-background-white">
-                            <div className="container">
-                                <div className="navbar-brand">
-                                    <a className="navbar-item">
-                                        <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" />
-                                    </a>
-                                    <span className="navbar-burger burger" data-target="navbarMenuHeroA">
-                                        <span />
-                                        <span />
-                                        <span />
-                                    </span>
-                                </div>
-                                <div id="navbarMenuHeroA" className="navbar-menu">
-                                    <div className="navbar-end">
-                                        <span className="navbar-item">
-                                            <a className="button is-primary is-inverted">
-                                                <span className="icon">
-                                                    <i className="fa fa-github" />
-                                                </span>
-                                                <span>Say Hi!</span>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+                <div>
+                    <nav className="navbar sticky-top navbar-light bg-light">
+                        <a className="navbar-brand" href="#"><img alt="logo image" src={require('./../images/logo.png')} /></a>
+                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Say Hi</button>
+                    </nav>
+                </div>
+                <div className="jumbotron primary-color ">
+                    <h1 className="display-4 contents">Hello</h1>
+                    <p className="lead contents">It is nice to see you here. Welcome to my site!</p>
+                </div>
+                <div className="container">
+                    <p className="text-center lead-paragraph"  >
+                        My name is Nischal (n ih sh - ch uh l). Since the beginning of my journey as Software Engineer I have been keen in designing and developing websites. I am constantly learning and imporving myself. And this site is just an humble way to expose my skills.
+                    </p>
+                    <hr />
+                    <div className="row ">
+                        <Work title="Edgenuity Inc" logo="" contents="The places I have worked at" />
+                        <Work title="Arizona State University" logo="" contents="The places I have worked at" />
+                        <Work title="Infosys Ltd" logo="" contents="The places I have worked at" />
                     </div>
-
-                    <div className="hero-body  has-background-white">
-                        <div className="container has-text-centered">
-                            <div className="columns is-flex is-centered">
-                                <div className="column">
-                                    <h1 className="title has-text-primary">My name is Nischal</h1>
-                                </div>
-                            </div>
-                            <h2 className="subtitle">
-                                Subtitle
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div className="hero-foot">
-                        <nav className="tabs">
-                            <div className="container">
-                                <ul>
-                                    <li className="is-active"><a>Overview</a></li>
-                                    <li><a>Modifiers</a></li>
-                                    <li><a>Grid</a></li>
-                                    <li><a>Elements</a></li>
-                                    <li><a>Components</a></li>
-                                    <li><a>Layout</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </section>
+                </div>
             </div>
         );
     }
