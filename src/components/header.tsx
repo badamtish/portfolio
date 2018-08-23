@@ -1,12 +1,17 @@
 import * as React from 'react';
 import Work from './work';
+import Logo from './../images/logo.png';
+import Edgenuity from './../images/company-logos/edgenuity.png';
+import ASU from './../images/company-logos/asu2.png';
+import Infosys from './../images/company-logos/infosys.png';
+
 export default class Header2 extends React.Component {
     render() {
         return (
             <div>
                 <div>
                     <nav className="navbar sticky-top navbar-light bg-light">
-                        <a className="navbar-brand" href="#"><img alt="logo image" src={require('./../images/logo.png')} /></a>
+                        <a className="navbar-brand" href="#"><img alt="logo image" src={Logo} /></a>
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Say Hi</button>
                     </nav>
                 </div>
@@ -19,11 +24,15 @@ export default class Header2 extends React.Component {
                         My name is Nischal (n ih sh - ch uh l). Since the beginning of my journey as Software Engineer I have been keen in designing and developing websites. I am constantly learning and imporving myself. And this site is just an humble way to expose my skills.
                     </p>
                     <hr />
-                    <div className="row ">
-                        <Work title="Edgenuity Inc" logo="" contents="The places I have worked at" />
-                        <Work title="Arizona State University" logo="" contents="The places I have worked at" />
-                        <Work title="Infosys Ltd" logo="" contents="The places I have worked at" />
+                    <div className="text-center header-text">
+                        <h4>Places I have worked at</h4>
                     </div>
+                    <div className="row">
+                        <Work title="Edgenuity Inc" logo={Edgenuity} contents={['React', 'Redux', 'TypeScript', 'ASP.NET', 'MSSQL']} />
+                        <Work title="Arizona State University" logo={ASU} contents={['Drupal', 'HTML', 'CSS', 'JavaScript', 'Java']} />
+                        <Work title="Infosys Ltd" logo={Infosys} contents={['ASP.NET', 'MSSQL', 'ITIL', 'Remedy', 'Oracle']} />
+                    </div>
+                    <hr />
                 </div>
             </div>
         );
