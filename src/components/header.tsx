@@ -4,6 +4,7 @@ import Logo from './../images/logo.png';
 import Edgenuity from './../images/company-logos/edgenuity.png';
 import ASU from './../images/company-logos/asu2.png';
 import Infosys from './../images/company-logos/infosys.png';
+import WorkDetails from './work-details';
 
 export default class Header2 extends React.Component {
     render() {
@@ -33,6 +34,7 @@ export default class Header2 extends React.Component {
                         <Work title="Infosys Ltd" logo={Infosys} contents={['ASP.NET', 'MSSQL', 'ITIL', 'Remedy', 'Oracle']} />
                     </div>
                     <hr />
+                    <WorkDetails logo={Edgenuity} company="Edgenuity" dates="from to" content="lols" />
                 </div>
             </div>
         );
