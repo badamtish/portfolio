@@ -1,3 +1,17 @@
+.bgimage {
+    width:100%;
+    height:500px;
+    background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+  .bgimage h5 {
+    color:white;
+    text-shadow:2px 2px #333;
+  }
+
 .primary-color {
     color: #a972ff;
 }
@@ -10,6 +24,7 @@
 
 .lead-paragraph{
     font-size: 1.5rem;
+    margin-bottom: 90px;
 }
 
 .company-logo{
@@ -23,14 +38,90 @@
     padding-bottom: 25px;
 }
 
-.tech-list{
-    display: block;
-}
-
 .header-text{
     padding-bottom: 25px;
 }
 
 .details {
     padding: 25px;
+    /* height: 180px; */
+}
+
+.details .logo{
+    height: 50px;
+    width: 50px;
+}
+
+.details.slide {
+    transform: translateX(0px) !important;
+}
+
+.cards {
+    background-color: #775ba5;
+    margin-top: -35px;
+    padding-top: 50px;
+    color: whitesmoke;
+}
+
+.cards-projects {
+    background-color: #775ba5;
+    padding-top: 50px;
+    color: whitesmoke;
+}
+
+
+.card {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.51);
+    cursor: pointer;
+}
+
+.nav-background{
+    background-color: #775ba5;
+}
+
+.nav-background .img-responsive {
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+.nav-background .img-responsive .logo {
+    height: 70px;
+    width: 70px;
+    margin-bottom: 50px;
+}
+
+.footer-content{
+    color: white;
+}
+
+.links {
+    color: white;
+    padding: 0 10px 0 10px;
+    font-size: 1.3rem;
+}
+
+.links:hover{
+    color: rgba(187, 185, 185, 0.972);
+}
+
+.links-row {
+    padding:40px;
+}
+
+.title-section {
+    font-size: 1.2rem;
+    border-right: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.tech-section {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
 }

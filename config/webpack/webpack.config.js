@@ -50,15 +50,9 @@ module.exports = {
         use: [
           'file-loader'
         ]
-      }
+      },
     ]
   },
-  loaders: [
-    {
-      test: /\.(png|jpg)$/,
-      loader: 'url?limit=25000'
-    }
-  ],
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html',

@@ -1,0 +1,22 @@
+{
+    "companies": [
+        {
+            "name": "Edgenuity",
+            "designation": "Software Engineer Intern",
+            "dates": "August 2017 - Present",
+            "description": "At Edgenuity I was introduced to React-Redux, and the agile way of developing software. Starting from minor tweaks to the product I progressed to creating complex components and containers in a couple of months. I developed RESTful API endpoints in ASP.NET. I built code pipelines to automatically deploy applications to AWS S3."
+        },
+        {
+            "name": "Arizona State University",
+            "designation": "Student Web Developer",
+            "dates": "August 2017 - May 2018",
+            "description": "Working part-time as Student Web Developer at ASU, exposed me to Drupal. A content management system which can be used to maintain large websites. Here I became adept at HTML, CSS and JavaScript."
+        },
+        {
+            "name": "Infosys Ltd",
+            "designation": "Senior Systems Engineer",
+            "dates": "October 2013 - December 2016",
+            "description": "Infosys was the beginning of my journey as software engineer. Here I was trained on Java, Oracle Databases, ASP.NET and MSSQL servers. I also became adept at ITIL practices such as Change Management and Configuration Management."
+        }
+    ]
+}
