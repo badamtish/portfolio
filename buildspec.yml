@@ -28,7 +28,7 @@ phases:
             # pwd
             - yarn build
             - ls -al
-            - aws s3 cp build s3://badamtish/build --recursive
+            - aws s3 sync build s3://badamtish/ --recursive
             # Building the serverless and deploying to APIGateway and Lambda
             # yarn $DEPLOY_SERVERLESS_BASED_ON_ENV
             # - echo $CODEBUILD_SRC_DIR
