@@ -148,6 +148,7 @@ export default class Header extends React.Component<{}, State> {
                         </div>
                     </nav>
                 </div>
+                {/**/}
             </div>
         );
     }
