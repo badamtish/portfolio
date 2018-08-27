@@ -24,8 +24,8 @@ phases:
     build:
         commands:
             # Building the react app and deploying to S3 bucket, invalidating the CloudFront
-            - cd ../ && ls -al
-            - pwd
+            # cd ../ && ls -al
+            # pwd
             - yarn build
             - ls -al
             # Building the serverless and deploying to APIGateway and Lambda
