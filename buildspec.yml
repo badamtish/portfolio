@@ -17,7 +17,7 @@ phases:
     pre_build:
         commands:
             # Pulling the environment files from private bucket
-            - aws s3 cp s3://badamtish/react ../ --recursive
+            - aws s3 cp s3://codepipeline-us-east-2-497833594177/react ../ --recursive
             # aws s3 cp s3://badamtish/serverless . --recursive
             # CloudFront configuration
             - aws configure set preview.cloudfront true
