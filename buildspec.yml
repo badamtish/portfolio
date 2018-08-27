@@ -36,8 +36,4 @@ phases:
     #     commands:
     #         – sls deploy –v
 
-artifacts:
-    files:
-        - serverless.yml
-    base-directory: 'serverless'
-    discard-paths: yes
+
