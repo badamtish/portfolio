@@ -6,11 +6,13 @@ import Edgenuity from './../images/company-logos/edgenuity.png';
 import ASU from './../images/company-logos/asu2.png';
 import Infosys from './../images/company-logos/infosys.png';
 import WorkDetails from './work-details';
-import Company from './../data/data';
+import { Company, Projects } from './../data/data';
 import Project from './../components/project';
+import ProjectDetails from './project-detail';
 
 interface State {
     company: Company;
+    project: Projects;
 }
 
 export default class Header extends React.Component<{}, State> {
@@ -20,9 +22,13 @@ export default class Header extends React.Component<{}, State> {
 
     infosys: Company = { name: 'Infosys Ltd', designation: 'Senior Systems Engineer', dates: 'October 2013 - December 2016', description: 'Infosys was the beginning of my journey as software engineer. Here I was trained on Java, Oracle Databases, ASP.NET and MSSQL servers. I also became adept at ITIL practices such as Change Management and Configuration Management.', logo: Infosys };
 
+    compiler: Projects = { name: 'Compiler Design', contents: 'In this project, I have designed a lexical analyzer for a programming language named Nirvana. The lexical analyzer was developed using Antlr. And the compiler was developed using Java. The runtime environment and the Command Line Interface was developed using Java.' };
+    dataAnalysis: Projects = { name: 'Weather Data Analysis', contents: 'This project invloved the analysis of historical weather data of up to 15 years, pulled from NOAA. The data was cleaned using Box-Plots to remove outliers and coverted to Pandas data frames. The ARIMA model was used to perform analysis of the time series data, and achieved 80% accuracy in prediction.' };
+    teamManagements: Projects = { name: 'Team Management Solution', contents: 'In this project a team management solution was developed for the ASU Polytechnic Soccer team. The databased was developed used MSSQL server and the UI was developed using ASP.NET.' };
+
     constructor() {
         super({});
-        this.state = { company: this.edgenuity };
+        this.state = { company: this.edgenuity, project: this.compiler };
     }
 
     onCardClick = (id: string) => {
@@ -39,6 +45,18 @@ export default class Header extends React.Component<{}, State> {
                 this.setState({ company: this.infosys });
                 break;
             }
+            case 'Compiler Design': {
+                this.setState({ project: this.compiler });
+                break;
+            }
+            case 'Weather Data Analysis': {
+                this.setState({ project: this.dataAnalysis });
+                break;
+            }
+            case 'Team Management Solution': {
+                this.setState({ project: this.teamManagements });
+                break;
+            }
             default: {
                 this.setState({ company: this.edgenuity });
             }
@@ -51,17 +69,16 @@ export default class Header extends React.Component<{}, State> {
                 <div>
                     <nav className="navbar sticky-top navbar-light bg-light">
                         <a className="navbar-brand" href="#"><img alt="logo image" src={Logo} /></a>
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Say Hi</button>
+                        <a className="btn btn-outline-success my-2 my-sm-0" href="mailto:nischal1991naik@gmail.com">Say Hi</a>
                     </nav>
                 </div>
                 <section className="bgimage">
                     <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h5>Hello, world! Full width Hero-unit header</h5>
-                                <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                                <p><a href="#" className="btn btn-primary btn-large">Learn more »</a></p>
-                            </div>
+                        <div className="hero-message text-center">
+                            Design and Develop
+                        </div>
+                        <div className="hero-sub-message text-center">
+                            One Step at a Time
                         </div>
                     </div>
                 </section>
@@ -96,19 +113,21 @@ export default class Header extends React.Component<{}, State> {
                         </div>
                         <div className="row">
                             <Project title="Compiler Design" tech={['Java', 'Antlr']} onClick={this.onCardClick} />
-                            <Project title="Data Analysis" tech={['Python', 'MySQL']} onClick={this.onCardClick} />
+                            <Project title="Weather Data Analysis" tech={['Python', 'MySQL']} onClick={this.onCardClick} />
                             <Project title="Team Management Solution" tech={['ASP.NET', 'MSSQL']} onClick={this.onCardClick} />
                         </div>
                         <hr />
                     </div>
                 </div>
-
+                <div className="row col-12">
+                    <ProjectDetails contents={this.state.project} />
+                </div>
                 <div>
                     <nav className="navbar navbar-inverse navbar-fixed-bottom nav-background">
                         <div className="container-fluid">
                             <div className="row col-12">
                                 <div className="img-responsive">
-                                    <img className="logo" src={FooterLogo} />
+                                    <a href="#"><img className="logo" src={FooterLogo} /></a>
                                 </div>
                             </div>
                             <div className="col-12">
@@ -118,11 +137,13 @@ export default class Header extends React.Component<{}, State> {
                             </div>
                             <div className="col-12">
                                 <div className="text-center links-row">
-                                    <a href="#" ><span className="links"><i className="fas fa-cloud-download-alt" /></span></a>
+                                    <a href="https://1drv.ms/b/s!AlKmxc0L239S5XHM47LMOLFvKq4N" target="_blank"><span className="links"><i className="fas fa-cloud-download-alt" /></span></a>
                                     <a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" ><span className="links"><i className="fab fa-linkedin-in" /></span></a>
                                     <a href="https://github.com/badamtish" target="_blank" ><span className="links"><i className="fab fa-github" /></span></a>
                                     <a href="mailto:nischal1991naik@gmail.com" target="_blank" ><span className="links"><i className="far fa-envelope" /></span></a>
                                 </div>
+                                <div className="foot-note text-center">Designed and developed using <a className="foot-link" href="https://reactjs.org/" target="_blank">React</a> by &copy;&nbsp;<a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" className="foot-link">Nischal Kumar</a></div>
+                                <div className="foot-note text-center">Logo made with <a className="foot-link" href="https://www.designevo.com/en/" title="Free Online Logo Maker" target="_blank">DesignEvo</a></div>
                             </div>
                         </div>
                     </nav>

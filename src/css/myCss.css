@@ -1,17 +1,25 @@
 .bgimage {
     width:100%;
     height:500px;
-    background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    background: url('./../images/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
     background-attachment: fixed;
   }
-  .bgimage h5 {
-    color:white;
-    text-shadow:2px 2px #333;
+
+  .hero-message{
+      color: #775ba5;
+      font-size: 3.5rem;
+      padding: 20px;
   }
 
+  .hero-sub-message {
+    color: #775ba5;
+    font-size: 1.5rem;
+    padding: 20px;
+
+  }
 .primary-color {
     color: #a972ff;
 }
@@ -44,7 +52,6 @@
 
 .details {
     padding: 25px;
-    /* height: 180px; */
 }
 
 .details .logo{
@@ -52,14 +59,21 @@
     width: 50px;
 }
 
-.details.slide {
-    transform: translateX(0px) !important;
+.project-title {
+    font-size: 1.3rem;
+    margin: 0 30% 0 30%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
 }
 
+.project-content {
+    padding-top: 10px;
+}
 .cards {
-    background-color: #775ba5;
-    margin-top: -35px;
+    background: rgb(119,91,165);
+    background: linear-gradient(0deg, rgba(119,91,165,1) 26%, rgba(109,65,182,1) 70%);
     padding-top: 50px;
+    margin-top: -35px;
     color: whitesmoke;
 }
 
@@ -68,7 +82,6 @@
     padding-top: 50px;
     color: whitesmoke;
 }
-
 
 .card {
     margin-bottom: 10px;
@@ -81,7 +94,8 @@
 }
 
 .nav-background{
-    background-color: #775ba5;
+    background: rgb(119,91,165);
+    background: linear-gradient(180deg, rgba(119,91,165,1) 13%, rgba(109,65,182,1) 49%);
 }
 
 .nav-background .img-responsive {
@@ -93,6 +107,20 @@
     height: 70px;
     width: 70px;
     margin-bottom: 50px;
+}
+
+.foot-note {
+    font-size: 0.8rem;
+    color: #dfdfdf;
+}
+
+.foot-link{
+    color: #dfdfdf;
+    text-decoration: underline;
+}
+
+.foot-link:hover {
+    color: #b7b5b5;
 }
 
 .footer-content{
@@ -124,4 +152,13 @@
     display: flex;
     align-items: center;
     padding-top: 20px;
+}
+
+.dates {
+    font-size: 0.9rem;
+    color: #585757;
+}
+
+.work-description {
+    padding-top: 15px;
 }

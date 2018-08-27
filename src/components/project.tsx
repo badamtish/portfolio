@@ -16,7 +16,7 @@ export default class Project extends React.Component<Props> {
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
-                            <div className="title-section col-8 text-center">
+                            <div className="title-section col-8">
                                 {this.props.title}
                             </div>
                             <div className="col-4 tech-section">
