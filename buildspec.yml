@@ -16,13 +16,6 @@ phases:
             # Building the react app and deploying to S3 bucket
             - yarn build
             - ls -al
-    post_build:
-        commands:
-            - |
-              if "${CODEBUILD_BUILD_SUCCEEDING}" == 0 then
-                aws s3 rm s3://badamtish --recursive
-                aws s3 sync build s3://badamtish/ 
-                echo Build Successfull.
-              else 
-                echo Build failed. Site not updated
-              fi
+            - aws s3 rm s3://badamtish --recursive
+            - aws s3 sync build s3://badamtish/ 
+            - echo Build Successfull
