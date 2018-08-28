@@ -18,7 +18,8 @@ phases:
             - ls -al
     post_build:
         commands:
-            - if [[ "${CODEBUILD_BUILD_SUCCEEDING}" == 0 ]]; then
+            - |
+              if [[ "${CODEBUILD_BUILD_SUCCEEDING}" == 0 ]]; then
                 aws s3 rm s3://badamtish --recursive
                 aws s3 sync build s3://badamtish/ 
               else 
