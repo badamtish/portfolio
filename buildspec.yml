@@ -19,9 +19,10 @@ phases:
     post_build:
         commands:
             - |
-              if [[ "${CODEBUILD_BUILD_SUCCEEDING}" == 0 ]]; then
+              if "${CODEBUILD_BUILD_SUCCEEDING}" == 0 then
                 aws s3 rm s3://badamtish --recursive
                 aws s3 sync build s3://badamtish/ 
+                echo Build Successfull.
               else 
-                echo Build failed. Contents not updated
+                echo Build failed. Site not updated
               fi
