@@ -10,6 +10,8 @@ import { Company, Projects } from './../data/data';
 import Project from './../components/project';
 import ProjectDetails from './project-detail';
 
+import * as ReactGA from 'react-ga';
+
 interface State {
     company: Company;
     project: Projects;
@@ -29,9 +31,16 @@ export default class Header extends React.Component<{}, State> {
     constructor() {
         super({});
         this.state = { company: this.edgenuity, project: this.compiler };
+        ReactGA.initialize('UA-124807376-1');
+        ReactGA.pageview('Homepage');
     }
 
     onCardClick = (id: string) => {
+        ReactGA.event({
+            category: 'cards',
+            action: id
+        });
+
         switch (id) {
             case 'Edgenuity Inc': {
                 this.setState({ company: this.edgenuity });
