@@ -142,7 +142,8 @@ export default class Header extends React.Component<{}, State> {
                                     <a href="https://github.com/badamtish" target="_blank" ><span className="links"><i className="fab fa-github" /></span></a>
                                     <a href="mailto:nischal1991naik@gmail.com" target="_blank" ><span className="links"><i className="far fa-envelope" /></span></a>
                                 </div>
-                                <div className="foot-note text-center">Designed and developed using <a className="foot-link" href="https://reactjs.org/" target="_blank">React</a> by &copy;&nbsp;<a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" className="foot-link">Nischal Kumar</a></div>
+                                <div className="foot-note text-center">Designed and developed using <a className="foot-link" href="https://reactjs.org/" target="_blank">React.</a> Hosted on AWS S3.</div>
+                                <div className="foot-note text-center">&copy;&nbsp;2018 <a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" className="foot-link">Nischal Kumar</a></div>
                                 <div className="foot-note text-center">Logo made with <a className="foot-link" href="https://www.designevo.com/en/" title="Free Online Logo Maker" target="_blank">DesignEvo</a></div>
                             </div>
                         </div>
