@@ -24,7 +24,7 @@ export default class Header extends React.Component<{}, State> {
 
     compiler: Projects = { name: 'Compiler Design', contents: 'In this project, I have designed a lexical analyzer for a programming language named Nirvana. The lexical analyzer was developed using Antlr. And the compiler was developed using Java. The runtime environment and the Command Line Interface was developed using Java.' };
     dataAnalysis: Projects = { name: 'Weather Data Analysis', contents: 'This project invloved the analysis of historical weather data of up to 15 years, pulled from NOAA. The data was cleaned using Box-Plots to remove outliers and coverted to Pandas data frames. The ARIMA model was used to perform analysis of the time series data, and achieved 80% accuracy in prediction.' };
-    teamManagements: Projects = { name: 'Team Management Solution', contents: 'In this project a team management solution was developed for the ASU Polytechnic Soccer team. The databased was developed used MSSQL server and the UI was developed using ASP.NET.' };
+    teamManagements: Projects = { name: 'Team Management Solution', contents: 'In this project a team management solution was developed for the ASU Polytechnic Soccer team. The database was developed using MSSQL server and the UI was developed using ASP.NET.' };
 
     constructor() {
         super({});
@@ -148,7 +148,6 @@ export default class Header extends React.Component<{}, State> {
                         </div>
                     </nav>
                 </div>
-                {/**/}
             </div>
         );
     }
