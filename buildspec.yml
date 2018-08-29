@@ -16,6 +16,5 @@ phases:
             # Building the react app and deploying to S3 bucket
             - yarn build
             - ls -al
-            - aws s3 rm s3://badamtish --recursive
-            - aws s3 sync build s3://badamtish/ 
-            - echo Build Successfull
+            - aws s3 rm s3://badamtish.com --recursive
+            - aws s3 sync build s3://badamtish.com/ --acl public-read
