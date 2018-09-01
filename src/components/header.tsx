@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Work from './work';
 import Logo from './../images/logo.png';
 import FooterLogo from './../images/logo-footer.png';
 import Edgenuity from './../images/company-logos/edgenuity.png';
@@ -9,6 +8,8 @@ import WorkDetails from './work-details';
 import { Company, Projects } from './../data/data';
 import Project from './../components/project';
 import ProjectDetails from './project-detail';
+
+import WorkHoverable from './../components/work-semantic';
 
 import * as ReactGA from 'react-ga';
 
@@ -105,9 +106,9 @@ export default class Header extends React.Component<{}, State> {
                             <h4>Places I have worked at</h4>
                         </div>
                         <div className="row">
-                            <Work title="Edgenuity Inc" logo={Edgenuity} contents={['React-Redux', 'TypeScript', 'ASP.NET', 'MSSQL', 'AWS']} onClick={this.onCardClick} />
-                            <Work title="Arizona State University" logo={ASU} contents={['Drupal', 'HTML', 'CSS', 'JavaScript', 'Java']} onClick={this.onCardClick} />
-                            <Work title="Infosys Ltd" logo={Infosys} contents={['ASP.NET', 'MSSQL', 'ITIL', 'Remedy', 'Oracle']} onClick={this.onCardClick} />
+                            <WorkHoverable title="Edgenuity Inc" logo={Edgenuity} contents={['React-Redux', 'TypeScript', 'ASP.NET', 'MSSQL', 'AWS']} onClick={this.onCardClick} />
+                            <WorkHoverable title="Arizona State University" logo={ASU} contents={['Drupal', 'HTML', 'CSS', 'JavaScript', 'Java']} onClick={this.onCardClick} />
+                            <WorkHoverable title="Infosys Ltd" logo={Infosys} contents={['ASP.NET', 'MSSQL', 'ITIL', 'Remedy', 'Oracle']} onClick={this.onCardClick} />
                         </div>
                         <hr />
                     </div>
