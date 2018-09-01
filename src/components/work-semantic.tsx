@@ -46,7 +46,7 @@ export default class WorkHoverable extends React.Component<Props, State> {
                             {content}
                         </Dimmer>
                         <div className="row contents">
-                            <h4 className="lead lead-color">{this.props.title}</h4>
+                            <h4 className="lead">{this.props.title}</h4>
                         </div>
                         <div className="text-center company-logo-row">
                             <img src={this.props.logo} className="rounded-circle company-logo" />

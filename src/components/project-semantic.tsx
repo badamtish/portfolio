@@ -1,11 +1,13 @@
 import * as React from 'react';
+import { Reveal } from 'semantic-ui-react';
 
 export interface Props {
     title: string;
     tech: string[];
     onClick: (id: string) => void;
 }
-export default class Project extends React.Component<Props> {
+
+export default class ProjectHoverable extends React.Component<Props> {
     click(id: string) {
         this.props.onClick(id);
     }
@@ -16,22 +18,23 @@ export default class Project extends React.Component<Props> {
                 <div className="card">
                     <div className="card-body">
                         <div className="row">
-                            <div className="title-section col-8">
-                                {this.props.title}
-                            </div>
-                            <div className="col-4 tech-section">
-                                <React.Fragment>
-                                    <ul className="list-unstyled ">
+                            <Reveal animated="move" className="card-section">
+                                <Reveal.Content visible={true}>
+                                    <div className="title-section text-center">{this.props.title}</div>
+                                </Reveal.Content>
+                                <Reveal.Content hidden={true} >
+                                    <ul className="list-unstyled text-center tech-section">
                                         {this.props.tech.map(tech =>
                                             <li key={tech}>{tech}</li>
                                         )}
                                     </ul>
-                                </React.Fragment>
-                            </div>
+                                </Reveal.Content>
+                            </Reveal>
                         </div>
                     </div>
                 </div>
             </div>
+
         );
     }
 }

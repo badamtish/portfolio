@@ -6,9 +6,10 @@ import ASU from './../images/company-logos/asu2.png';
 import Infosys from './../images/company-logos/infosys.png';
 import WorkDetails from './work-details';
 import { Company, Projects } from './../data/data';
-import Project from './../components/project';
 import ProjectDetails from './project-detail';
 import WorkHoverable from './../components/work-semantic';
+
+import ProjectHoverable from './../components/project-semantic';
 
 import * as ReactGA from 'react-ga';
 
@@ -121,9 +122,9 @@ export default class Header extends React.Component<{}, State> {
                             <h4>Academic Projects</h4>
                         </div>
                         <div className="row">
-                            <Project title="Compiler Design" tech={['Java', 'Antlr']} onClick={this.onCardClick} />
-                            <Project title="Weather Data Analysis" tech={['Python', 'MySQL']} onClick={this.onCardClick} />
-                            <Project title="Team Management Solution" tech={['ASP.NET', 'MSSQL']} onClick={this.onCardClick} />
+                            <ProjectHoverable title="Compiler Design" tech={['Java', 'Antlr']} onClick={this.onCardClick} />
+                            <ProjectHoverable title="Weather Data Analysis" tech={['Python', 'MySQL']} onClick={this.onCardClick} />
+                            <ProjectHoverable title="Team Management Solution" tech={['ASP.NET', 'MSSQL']} onClick={this.onCardClick} />
                         </div>
                         <hr />
                     </div>
