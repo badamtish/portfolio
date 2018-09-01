@@ -12,7 +12,7 @@ export default class Project extends React.Component<Props> {
 
     render() {
         return (
-            <div className="col-sm-12 col-md-4 col-lg-4" onClick={() => this.click(this.props.title)}>
+            <div className="col-sm-12 col-md-4 col-lg-4 projects" onClick={() => this.click(this.props.title)}>
                 <div className="card">
                     <div className="card-body">
                         <div className="row">

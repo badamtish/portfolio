@@ -8,7 +8,6 @@ import WorkDetails from './work-details';
 import { Company, Projects } from './../data/data';
 import Project from './../components/project';
 import ProjectDetails from './project-detail';
-
 import WorkHoverable from './../components/work-semantic';
 
 import * as ReactGA from 'react-ga';
