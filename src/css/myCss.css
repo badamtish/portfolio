@@ -151,11 +151,39 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    height: 3rem;
+    height: 6rem;
     background: #fff;
 }
 
+.tech-section span {
+    color: black;
+    margin-top: 15px;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.tech-section span:hover {
+    color: #b6b3b3;
+}
+
 .list-items {
+    color: #494848;
+}
+
+.list-items.view-more {
+    color: black;
+    text-decoration: underline;
+    padding-top:15px;
+}
+
+.list-items.view-more:hover {
+    color: #b6b3b3;
+    text-decoration: underline;
+}
+
+.text-center li span {
+    display: inline-block;
+    padding-top: 15px;
     color: #494848;
 }
 
