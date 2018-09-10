@@ -28,11 +28,10 @@ export default class WorkHoverable extends React.Component<Props, State> {
         const content = (
             <div className="row contents">
                 <ul className="list-unstyled text-center ">
-                    <React.Fragment>
-                        {this.props.contents.map(tech =>
-                            <li className="list-items" key={tech}>{tech}</li>
-                        )}
-                    </React.Fragment>
+                    {this.props.contents.map(tech =>
+                        <li className="list-items" key={tech}>{tech}</li>
+                    )}
+                    <li className="list-items view-more">View More</li>
                 </ul>
             </div>
         );

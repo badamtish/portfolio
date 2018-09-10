@@ -27,6 +27,7 @@ export default class ProjectHoverable extends React.Component<Props> {
                                         {this.props.tech.map(tech =>
                                             <li key={tech}>{tech}</li>
                                         )}
+                                        <span>View More</span>
                                     </ul>
                                 </Reveal.Content>
                             </Reveal>
