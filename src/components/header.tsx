@@ -36,6 +36,13 @@ export default class Header extends React.Component<{}, State> {
         ReactGA.pageview('Homepage');
     }
 
+    onLinkClick = (id: string) => {
+        ReactGA.event({
+            category: 'links',
+            action: id
+        });
+    }
+
     onCardClick = (id: string) => {
         ReactGA.event({
             category: 'cards',
@@ -147,10 +154,10 @@ export default class Header extends React.Component<{}, State> {
                             </div>
                             <div className="col-12">
                                 <div className="text-center links-row">
-                                    <a href="https://1drv.ms/b/s!AlKmxc0L239S5XHM47LMOLFvKq4N" target="_blank"><span className="links"><i className="fas fa-cloud-download-alt" /></span></a>
-                                    <a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" ><span className="links"><i className="fab fa-linkedin-in" /></span></a>
-                                    <a href="https://github.com/badamtish" target="_blank" ><span className="links"><i className="fab fa-github" /></span></a>
-                                    <a href="mailto:nischal1991naik@gmail.com" target="_blank" ><span className="links"><i className="far fa-envelope" /></span></a>
+                                    <a href="https://1drv.ms/b/s!AlKmxc0L239S5XHM47LMOLFvKq4N" target="_blank" onClick={() => this.onLinkClick('resume')}><span className="links"><i className="fas fa-cloud-download-alt" /></span></a>
+                                    <a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" onClick={() => this.onLinkClick('linkedin')} ><span className="links"><i className="fab fa-linkedin-in" /></span></a>
+                                    <a href="https://github.com/badamtish" target="_blank" onClick={() => this.onLinkClick('github')}><span className="links"><i className="fab fa-github" /></span></a>
+                                    <a href="mailto:nischal1991naik@gmail.com" target="_blank" onClick={() => this.onLinkClick('email')}><span className="links"><i className="far fa-envelope" /></span></a>
                                 </div>
                                 <div className="foot-note text-center">Designed and developed using <a className="foot-link" href="https://reactjs.org/" target="_blank">React.</a> Hosted on AWS S3.</div>
                                 <div className="foot-note text-center">&copy;&nbsp;2018 <a href="https://www.linkedin.com/in/nischalkumarms/" target="_blank" className="foot-link">Nischal Kumar</a></div>
